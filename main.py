@@ -1,3 +1,4 @@
+from Cryptodome.SelfTest.Cipher.test_OFB import file_name
 from pytubefix import YouTube
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLineEdit, QPushButton, QComboBox, QLabel, QVBoxLayout, QWidget, \
 	QSizePolicy, QFileDialog
@@ -118,6 +119,8 @@ class DownloaderWindow(QMainWindow):
 			if self.file_name == "":
 				self.file_name = yt.title + resolution + '.' + mime_type.split('/')[1]
 			else:
+				if mime_type.split("/")[1] in self.file_name:
+					self.file_name = self.file_name.split(".")[0]
 				self.file_name = self.file_name + '.' + mime_type.split('/')[1]
 			stream_to_download.download(output_path=self.folder_path, filename=self.file_name)
 			self.error_code = "Successfully downloaded " + resolution

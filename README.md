@@ -21,7 +21,7 @@ This project is a simple Python-based YouTube video downloader that allows users
 ## Usage
 1. Run the Python script:
     ```bash
-    python downloader.py
+    python main.py
     ```
 2. Input the YouTube video URL when prompted, select the desired resolution/format, and download the video.
 

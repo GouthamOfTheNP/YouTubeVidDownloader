@@ -24,7 +24,10 @@ This project is a simple Python-based YouTube video downloader that allows users
     python main.py
     ```
 2. Input the YouTube video URL when prompted, select the desired resolution/format, and download the video.
-3. If you want to make this an app, run ```pyinstaller main.py --windowed --icon=ytvid.png```
+3. If you want to make this an app, run:
+    ```bash
+    pyinstaller main.py --windowed --icon=ytvid.png
+    ```
 
 ## License
 This project is licensed under the MIT License, allowing for any use of this code with attribution.
